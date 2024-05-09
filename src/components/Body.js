@@ -1,27 +1,28 @@
+import Image from 'next/image';
 const Body = () => {
-  const name = "Rickee Vang / Aspiring Data Center Technician";
-  const paragraphOne = "Technology is the present and the future. It has helped make our everyday lives so much easier. Now what would be better than benefitting from the usefulness of technology? By directly contributing to it.";
-  const paragraphTwo = " As a data center technician, I would be standing at the forefront of innovation, ensuring the seamless operation of the digital infrastructure that powers our modern world.";
-  const paragraphThree = "I am excited to apply my skills and knowledge to this hands-on career that is so deeply interwined and interconnected with technology.";
+
   return (
-    <div>
-      <div className="flex flex-col items-start justify-center px-20 md:px-40 lg:px-80 outline-4 border-2 border-color: rgb(0 0 0);">
-        <div className="flex flex-col justify-center border-2 border-color: rgb(0 0 0);">
-          <p className="text-xl">{name}</p>
-          <br></br>
-          <p className="text-m">{paragraphOne}</p>
-          <p className="text-m">{paragraphTwo}</p>
-          <p className="text-m">{paragraphThree}</p>
-          <br></br>
-          <p className="text-m">I am stilly studying to obtain the CompTIA Network+ certification.</p>
-          <br></br>
-          <p className="text-m">I recently completed a fiber optics and copper cabling class in the Spring 2024 semester.</p>
-          <br></br>
-        </div>
-        <div className="flex flex-col items-center justify-center border-2 border-color: rgb(0 0 0);">
-          <a href="https://www.linkedin.com/in/rickeevang/" className="text-blue-500 hover:underline">LinkedIn</a>
-        </div>
+    <div className="flex flex-col justify-center items-center px-20 md:px-40 lg:px-80 outline-4 pt-8">
+      <div className="flex flex-col justify-center">
+        <h1 className="text-7xl">Rickee Vang</h1>
+        <h2 className="text-xl pb-4">Aspiring Data Center Technician</h2>
+        <p className="text-m pb-2">
+          Technology is the present and the future. It has helped make our everyday lives so much easier. Now what would be better than benefitting from the usefulness of technology? By directly contributing to it. 
+        </p>
+        <p className="text-m pb-2">
+          As a data center technician, I would be standing at the forefront of innovation, ensuring the seamless operation of the digital infrastructure that powers our modern world.
+        </p>
+        <p className="text-m pb-2">
+          I am excited to apply my skills and knowledge to this hands-on career that is so deeply interwined and interconnected with technology.
+        </p>
+        <p className="text-m pb-2">I am stilly studying to obtain the CompTIA Network+ certification.</p>
+        <p className="text-m pb-2">I recently completed a fiber optics and copper cabling class in the Spring 2024 semester.</p>
       </div>
+            <div className="centered-content">
+              <a href="https://www.linkedin.com/in/rickeevang/" className="text-blue-500 hover:underline">
+                <Image src="/icons8-linkedin.svg" alt="LinkedIn Logo" viewBox="0 0 36 36" width="36" height="36" />
+              </a>
+            </div>
     </div>
   );
 };

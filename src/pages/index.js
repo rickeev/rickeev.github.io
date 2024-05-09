@@ -1,9 +1,13 @@
-import Home from "../components/Home";
+import Navbar from "@/components/Navbar";
+import Body from "@/components/Body";
+import Footer from "@/components/Footer";
 
 export default function IndexPage() {
   return (
     <main>
-      <Home />
+      <Navbar />
+      <Body />
+      <Footer />
     </main>
   );
 }
