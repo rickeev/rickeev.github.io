@@ -3,7 +3,7 @@ import { Button } from "../components/ui/button";
 const Navbar = () => {
   return (
   <nav>
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl pt-4 mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex items-center justify-between h-16">
         <div className="flex items-center">
           <div className="hidden flex-shrink-0 text-3xl text-[#102732]">

@@ -6,7 +6,7 @@ const Body = () => {
    <div className="flex flex-col justify-center items-center px-20 md:px-40 lg:px-80 outline-4 pt-8">
     <div className="flex flex-col justify-center">
       <h1 className="text-7xl">Rickee Vang</h1>
-      <h2 className="text-xl pb-4">Aspiring Data Center Technician</h2>
+      <h2 className="text-xl pb-4">Aspiring Data Center Technician based in Sacramento, CA</h2>
       <p className="text-m">
         Technology is the present <em>and</em> the future. Now what would be better than benefitting from the usefulness of technology? By directly contributing to it.
       </p>
