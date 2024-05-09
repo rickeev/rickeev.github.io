@@ -16,7 +16,7 @@ const Body = () => {
           I am excited to apply my skills and knowledge to this hands-on career that is so deeply interwined and interconnected with technology.
         </p>
         <p className="text-m pb-2">I am stilly studying to obtain the CompTIA Network+ certification.</p>
-        <p className="text-m pb-2">I recently completed a fiber optics and copper cabling class in the Spring 2024 semester.</p>
+        <p className="text-m pb-2">I recently completed a copper and fiber optics cabling class in the Spring 2024 semester.</p>
       </div>
             <div className="centered-content">
               <a href="https://www.linkedin.com/in/rickeevang/" className="text-blue-500 hover:underline">
