@@ -13,7 +13,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 space-x-4">
             <Button>
-              <a href="/Rickee_Vang_Resume.pdf" target="_blank">Resume</a>
+              <a href="/Rickee_Vang_CV.pdf" target="_blank">Resume</a>
             </Button>
           </div>
         </div>
