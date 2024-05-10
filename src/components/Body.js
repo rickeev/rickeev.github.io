@@ -21,7 +21,7 @@ const Body = () => {
     </div>
     <div className="centered-content">
       <a href="https://www.linkedin.com/in/rickeevang/">
-        <Image src="/icons8-linkedin.svg" alt="LinkedIn Logo" viewBox="0 0 36 36" width="36" height="36" />
+        <Image src="/icons8-linkedin.svg" alt="LinkedIn Logo, click it to go to my LinkedIn page" viewBox="0 0 36 36" width="36" height="36" />
       </a>
     </div>
    </div>
