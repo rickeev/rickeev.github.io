@@ -1,6 +1,6 @@
-import { Button } from "../components/ui/button";
+import { Button } from "./ui/button";
 
-const Navbar = () => {
+const Header = () => {
   return (
   <nav>
     <div className="max-w-7xl pt-4 mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,4 +21,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
