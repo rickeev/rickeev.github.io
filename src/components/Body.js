@@ -16,8 +16,8 @@ const Body = () => {
       <p className="text-m pb-2">
         I am excited to apply my skills and knowledge to this hands-on career that is so deeply intertwined and interconnected with technology.
       </p>
-      <p className="text-m pb-4">Recently completed a copper and fiber optics cabling class in the Spring 2024 semester.</p>
-      <p className="text-m pb-2">Still studying to obtain the CompTIA Network+ certification.</p>
+      <p className="text-m pb-4">Recently completed a copper and fiber optic cabling class in the Spring 2024 semester.</p>
+      <p className="text-m pb-2">Still studying to obtain the CompTIA Server+ certification.</p>
     </div>
     <div className="centered-content">
       <a href="https://www.linkedin.com/in/rickeevang/">

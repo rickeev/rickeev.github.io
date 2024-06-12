@@ -12,7 +12,7 @@ const Header = () => {
         </div>
         <div className="ml-10 space-x-4">
           <Button alt="Resume Button, click it to open the PDF file of my resume in a new tab">
-            <a href="/Rickee_Vang_CV.pdf" target="_blank">Resume</a>
+            <a href="/RickeeVangResume.pdf" target="_blank">Resume</a>
           </Button>
       </div>
       </div>
