@@ -1,0 +1,413 @@
+@font-face {
+    font-family: 'Monument Extended';
+    src: url('MonumentExtended-Ultrabold.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monument Extended Regular';
+    src: url('MonumentExtended-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Haas Medium';
+    src: url('NeueHaasDisplayMediu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Haas XThin';
+    src: url('NeueHaasDisplayXThing.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #fafafa;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid #333;
+    height: 2.5rem;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar-container {
+    max-width: 1600px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 3%;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    height: 100%;
+    padding-right: 2rem;
+}
+
+.navbar ul li {
+    display: flex;
+    height: 100%;
+}
+
+.navbar ul li a {
+    font-family: 'Monument Extended', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.1rem;
+    transition: color 0.2s, background-color 0.2s;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.nav-icon {
+    transition: filter 0.2s;
+    filter: invert(0%);
+}
+
+.navbar ul li a:hover .nav-icon {
+    filter: invert(100%);
+}
+
+.navbar ul li a:hover {
+    color: white;
+    background-color: #333;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 3%;
+    overflow: hidden;
+}
+
+.left-section, .right-section {
+    width: 50%;
+    padding: 2rem;
+    padding-top: 2rem;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.name-container {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.name-wrapper {
+    margin-bottom: 0.7rem;
+}
+
+.name-first, .name-last {
+    font-family: 'Monument Extended', sans-serif;
+    color: #333;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    line-height: 0.85;
+}
+
+.name-first {
+    font-size: 8rem;
+}
+
+.name-last {
+    font-size: 10.5rem;
+}
+
+.info-container {
+    margin-top: 2rem;
+    width: 100%;
+    padding-left: 0.5rem;
+}
+
+.info {
+    font-family: 'Neue Haas Medium', sans-serif;
+    font-size: 2.5rem;
+    color: #444;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+    width: 100%;
+}
+
+.info p {
+    margin-bottom: 0.3rem;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.projects-title, .skills-title {
+    font-family: 'Monument Extended Regular', sans-serif;
+    font-size: 3.4rem;
+    margin-bottom: 0.6rem;
+    color: #333;
+    text-align: left;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 0.9;
+}
+
+.projects-list {
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+.skills-list {
+    width: 100%;
+    margin-bottom: 0.3rem;
+}
+
+.project {
+    background-color: white;
+    border-radius: 0;
+    border: 3px solid #333;
+    padding: 0.5rem;
+    margin-bottom: 0.6rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.project-title {
+    font-family: 'Neue Haas Medium', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+    color: #333;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.project-icon {
+    transition: filter 0.2s;
+}
+
+.project-link {
+    font-family: 'Neue Haas XThin', sans-serif;
+    color: #555;
+    text-decoration: none;
+    font-weight: normal;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s;
+    border-bottom: 1px solid transparent;
+}
+
+.project-link:hover {
+    color: #333;
+    border-bottom: 1px solid #333;
+}
+
+.project-link:hover .project-icon {
+    filter: invert(20%);
+}
+
+.project-description {
+    font-family: 'Neue Haas XThin', sans-serif;
+    color: #555;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7rem;
+    width: 100%;
+}
+
+.skill-item {
+    font-family: 'Neue Haas XThin', sans-serif;
+    background-color: white;
+    border: 3px solid #333;
+    padding: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: normal;
+    text-align: center;
+    color: #444;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+footer {
+    position: relative;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s, filter 0.2s;
+    background-color: white;
+}
+
+.social-icons a:hover img {
+    filter: brightness(0.7);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1200px) {
+    body {
+        height: auto;
+        overflow: auto;
+    }
+    
+    .main-content {
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 2rem;
+    }
+    
+    .left-section {
+        padding-bottom: 0.5rem;
+    }
+    
+    .right-section {
+        padding-top: 0.5rem;
+    }
+    
+    .name-container {
+        margin-bottom: 1rem;
+    }
+
+    .name-first {
+        font-size: 5rem;
+    }
+    
+    .name-last {
+        font-size: 6.5rem;
+    }
+    
+    .info {
+        font-size: 1.4rem;
+    }
+    
+    .projects-title, .skills-title {
+        font-size: 2rem;
+    }
+    
+    .projects-list {
+        margin-bottom: 0.5rem;
+    }
+    
+    .project-title {
+        font-size: 1rem;
+    }
+    
+    .project-description {
+        font-size: 0.75rem;
+    }
+    
+    .navbar ul li a {
+        font-size: 0.9rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .social-icons {
+        position: static;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-section, .right-section {
+        padding: 1.5rem;
+    }
+    
+    .left-section {
+        padding-bottom: 0.3rem;
+    }
+    
+    .right-section {
+        padding-top: 0.3rem;
+    }
+    
+    .name-container {
+        margin-bottom: 0.5rem;
+    }
+    
+    .name-first {
+        font-size: 3.2rem;
+    }
+    
+    .name-last {
+        font-size: 4.2rem;
+    }
+    
+    .info {
+        font-size: 0.85rem;
+    }
+    
+    .projects-title, .skills-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .projects-list {
+        margin-bottom: 0.3rem;
+    }
+    
+    .navbar ul li a {
+        font-size: 0.7rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
