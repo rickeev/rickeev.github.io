@@ -1,28 +1,8 @@
-.social-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
+* {
     margin: 0;
-    background-color: #fafafa;
-    justify-content: center;
-    align-items: center;
-}
-
-.page-container {
-    width: 100%;
-    max-width: 1600px;
-}
-
-.page-inner-container {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 @font-face {
@@ -53,11 +33,13 @@ body {
     font-style: normal;
 }
 
-* {
+body {
+    min-height: 100vh;
+    display: flex;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    justify-content: center;
+    align-items: center;
 }
 
 body::after {
@@ -72,15 +54,26 @@ body::after {
     pointer-events: none;
 }
 
+.page-container {
+    width: 100%;
+    max-width: 1600px;
+}
+
+.page-inner-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
 .navbar {
     background-color: #fafafa;
     position: relative;
-    height: 50px;
+    height: auto;
     width: 100%;
 }
 
 .navbar-container {
-    padding: 0 3%;
+    padding: 0 4%;
     height: 100%;
     width: 100%;
     display: flex;
@@ -93,6 +86,7 @@ body::after {
     height: 100%;
     padding: 0;
     margin: 0;
+    border: 1px solid #222;
 }
 
 .navbar ul li {
@@ -105,7 +99,7 @@ body::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333;
+    color: #222;
     text-decoration: none;
     font-weight: normal;
     font-size: 1.5rem;
@@ -129,7 +123,7 @@ body::after {
 
 .navbar ul li a:hover {
     color: white;
-    background-color: #333;
+    background-color: #222;
 }
 
 .main-content {
@@ -137,7 +131,7 @@ body::after {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 3%;
-    height: 590px;
+    height: 650px;
     margin-bottom: 0;
 }
 
@@ -145,20 +139,20 @@ body::after {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
     padding: 0;
-    padding-top: 1rem;
     position: relative;
     height: auto;
 }
 
 .name-wrapper {
-    margin: 0 0 2rem 0;
+    margin: 1.2rem 0 0 0;
 }
 
 .name-first, .name-last {
     font-family: 'Monument Extended', sans-serif;
-    color: #333;
+    color: #222;
     font-weight: 900;
     letter-spacing: -0.02em;
     text-transform: uppercase;
@@ -175,14 +169,14 @@ body::after {
 
 .info-container {
     width: 100%;
-    margin: 0;
+    margin-top: 1.2rem;
     padding-left: 0.5rem;
 }
 
 .info {
     font-family: 'Neue Haas Medium', sans-serif;
     font-size: 2.5rem;
-    color: #444;
+    color: #333;
     font-weight: normal;
     line-height: 1.2;
     text-align: left;
@@ -190,7 +184,7 @@ body::after {
 }
 
 .info p {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
 }
 
 .right-section {
@@ -198,9 +192,9 @@ body::after {
     flex-direction: column;
     align-items: flex-start;
     width: 50%;
-    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-left: 0.5rem;
     padding: 0;
-    padding-top: 1rem;
     position: relative;
     height: auto;
 }
@@ -208,8 +202,8 @@ body::after {
 .projects-title, .skills-title {
     font-family: 'Monument Extended Regular', sans-serif;
     font-size: 3.4rem;
-    margin-bottom: 0.6rem;
-    color: #333;
+    margin-top: 1.2rem;
+    color: #222;
     text-align: left;
     font-weight: normal;
     text-transform: uppercase;
@@ -218,7 +212,8 @@ body::after {
 
 .projects-list {
     width: 100%;
-    margin: 0 0 1.2rem 0;
+    /* Remove the below */
+    /* margin: 0 0 1.2rem 0; */
 }
 
 .skills-list {
@@ -232,14 +227,14 @@ body::after {
     padding: 0.5rem;
     margin-bottom: 0.6rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    border: 1px solid #333;
+    border: 1px solid #222;
 }
 
 .project-title {
     font-family: 'Neue Haas Medium', sans-serif;
     font-size: 1.8rem;
     margin-bottom: 0.3rem;
-    color: #333;
+    color: #222;
     text-transform: uppercase;
     line-height: 1;
     font-weight: normal;
@@ -251,7 +246,7 @@ body::after {
 
 .project-link {
     font-family: 'Neue Haas XThin', sans-serif;
-    color: #555;
+    color: #444;
     text-decoration: none;
     font-weight: normal;
     display: inline-flex;
@@ -261,8 +256,8 @@ body::after {
 }
 
 .project-link:hover {
-    color: #333;
-    border-bottom: 1px solid #333;
+    color: #222;
+    border-bottom: 1px solid #222;
 }
 
 .project-link:hover .project-icon {
@@ -271,15 +266,15 @@ body::after {
 
 .project-description {
     font-family: 'Neue Haas XThin', sans-serif;
-    color: #555;
+    color: #444;
     line-height: 1.4;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.7rem;
+    gap: 0.6rem;
     width: 100%;
 }
 
@@ -287,12 +282,12 @@ body::after {
     font-family: 'Neue Haas XThin', sans-serif;
     background-color: #ffffff;
     padding: 0.5rem;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: normal;
     text-align: center;
-    color: #444;
+    color: #333;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    border: 1px solid #333;
+    border: 1px solid #222;
 }
 
 @media screen and (min-width: 1600px) {
@@ -307,7 +302,7 @@ body::after {
     }
 }
 
-@media screen and (max-width: 1175px) {
+@media screen and (max-width: 1200px) {
     .main-content {
         flex-direction: column;
     }
