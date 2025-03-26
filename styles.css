@@ -203,6 +203,7 @@ body::after {
     font-family: 'Monument Extended Regular', sans-serif;
     font-size: 3.4rem;
     margin-top: 1.2rem;
+    margin-bottom: 0.3rem;
     color: #222;
     text-align: left;
     font-weight: normal;
@@ -210,13 +211,7 @@ body::after {
     line-height: 0.9;
 }
 
-.projects-list {
-    width: 100%;
-    /* Remove the below */
-    /* margin: 0 0 1.2rem 0; */
-}
-
-.skills-list {
+.projects-list, .skills-list {
     width: 100%;
     margin: 0;
 }
