@@ -41,7 +41,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1.0fr 1.0fr;
+    grid-template-columns: 1fr 1fr;
     height: 100vh;
 }
 
@@ -234,13 +234,14 @@ body {
         font-size: 2.5rem;
     }
 
+    .skills-title,
+    .projects-title {
+        font-size: 2rem;
+    }
+
     .right-column {
         padding: 2rem;
         overflow-y: visible;
-    }
-
-    .projects-title {
-        font-size: 2rem;
     }
 }
 
@@ -249,6 +250,7 @@ body {
         font-size: 2rem;
     }
 
+    .skills-title,
     .projects-title {
         font-size: 1.5rem;
     }
