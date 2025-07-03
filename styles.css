@@ -36,13 +36,33 @@ body {
     font-family: 'Neue Haas XThin', Arial, sans-serif;
     height: 100vh;
     overflow: hidden;
-    background-color: #f8f8f8;
+    background: linear-gradient(to right, #1a1a1a 50%, #f8f8f8 50%);
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
+    overflow: hidden;
+}
+
+/* Animations */
+@keyframes slideUpLeft {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUpRight {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Left Column */
@@ -52,6 +72,8 @@ body {
     padding: 3rem;
     display: flex;
     flex-direction: column;
+    transform: translateY(100%);
+    animation: slideUpLeft 0.6s ease-out forwards;
 }
 
 .profile-section {
@@ -116,11 +138,41 @@ body {
     border-radius: 18px;
     font-size: 0.9rem;
     font-weight: normal;
-    transition: background 0.2s ease;
 }
 
-.skill-pill:hover {
-    background: rgba(255, 255, 255, 0.18);
+/* Contact Section */
+.contact-section {
+    margin-top: 2.5rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-link {
+    font-family: 'Neue Haas Medium', sans-serif;
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: white;
+}
+
+.contact-icon {
+    filter: invert(1);
+    transition: transform 0.2s ease;
+}
+
+.contact-link:hover .contact-icon {
+    transform: translateX(2px) translateY(-2px);
 }
 
 /* Right Column */
@@ -128,6 +180,8 @@ body {
     background-color: #f8f8f8;
     padding: 3rem;
     overflow-y: auto;
+    transform: translateY(100%);
+    animation: slideUpRight 0.6s ease-out 0.2s forwards;
 }
 
 .projects-title {
@@ -141,15 +195,15 @@ body {
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .project-card {
     background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e8e8e8;
 }
 
 .project-header {
@@ -174,17 +228,17 @@ body {
 
 .project-link {
     font-family: 'Neue Haas XThin', sans-serif;
-    color: #666;
+    color: #2563eb;
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: normal;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
     border-bottom: 1px solid transparent;
 }
 
 .project-link:hover {
-    color: #222;
-    border-bottom: 1px solid #222;
+    color: #1d4ed8;
+    border-bottom: 1px solid #1d4ed8;
 }
 
 .project-description {
@@ -211,6 +265,7 @@ body {
     font-weight: normal;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
@@ -219,6 +274,7 @@ body {
 
     body {
         overflow-y: auto;
+        background: #1a1a1a;
     }
 
     .left-column {
@@ -242,6 +298,11 @@ body {
     .right-column {
         padding: 2rem;
         overflow-y: visible;
+        background-color: #f8f8f8;
+    }
+
+    .contact-links {
+        justify-content: space-around;
     }
 }
 
@@ -258,5 +319,11 @@ body {
     .left-column,
     .right-column {
         padding: 1.5rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
     }
 }
