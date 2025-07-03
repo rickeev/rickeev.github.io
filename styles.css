@@ -1,10 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 @font-face {
     font-family: 'Monument Extended';
     src: url('MonumentExtended-Ultrabold.otf') format('opentype');
@@ -33,220 +26,159 @@
     font-style: normal;
 }
 
-body {
-    min-height: 100vh;
-    display: flex;
+* {
     margin: 0;
-    background-color: #fafafa;
-    justify-content: center;
-    align-items: center;
-}
-
-body::after {
-    content: '';
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at bottom right, rgba(230,230,230,0.8) 0%, rgba(255,255,255,0) 35%);
-    z-index: -1;
-    pointer-events: none;
-}
-
-.page-container {
-    width: 100%;
-    max-width: 1600px;
-}
-
-.page-inner-container {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-.navbar {
-    background-color: #fafafa;
-    position: relative;
-    height: auto;
-    width: 100%;
-}
-
-.navbar-container {
-    padding: 0 4%;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navbar ul {
-    display: flex;
-    list-style: none;
-    height: 100%;
     padding: 0;
-    margin: 0;
-    border: 1px solid #222;
+    box-sizing: border-box;
 }
 
-.navbar ul li {
-    display: flex;
-    height: 100%;
+body {
+    font-family: 'Neue Haas XThin', Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f8f8f8;
 }
 
-.navbar ul li a {
-    font-family: 'Monument Extended', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #222;
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 1.5rem;
-    transition: color 0.2s, background-color 0.2s;
-    padding: 0 1rem;
-    height: 100%;
+.container {
+    display: grid;
+    grid-template-columns: 1.0fr 1.0fr;
+    height: 100vh;
 }
 
-.navbar ul li a.resume-link {
-    font-family: 'Neue Haas Medium', sans-serif;
-}
-
-.nav-icon {
-    transition: filter 0.2s;
-    filter: invert(0%);
-}
-
-.navbar ul li a:hover .nav-icon {
-    filter: invert(100%);
-}
-
-.navbar ul li a:hover {
+/* Left Column */
+.left-column {
+    background-color: #1a1a1a;
     color: white;
-    background-color: #222;
-}
-
-.main-content {
-    display: flex;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 3%;
-    height: 650px;
-    margin-bottom: 0;
-}
-
-.left-section {
+    padding: 3rem;
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin-left: 1rem;
-    margin-right: 0.5rem;
-    padding: 0;
-    position: relative;
-    height: auto;
 }
 
-.name-wrapper {
-    margin: 1.2rem 0 0 0;
+.profile-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.name-first, .name-last {
+.name-title {
     font-family: 'Monument Extended', sans-serif;
-    color: #222;
+    font-size: 3.5rem;
     font-weight: 900;
-    letter-spacing: -0.02em;
+    color: white;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     line-height: 0.85;
 }
 
-.name-first {
-    font-size: 8rem;
-}
-
-.name-last {
-    font-size: 10.5rem;
-}
-
-.info-container {
-    width: 100%;
-    margin-top: 1.2rem;
-    padding-left: 0.5rem;
-}
-
-.info {
+.subtitle {
     font-family: 'Neue Haas Medium', sans-serif;
-    font-size: 2.5rem;
-    color: #333;
-    font-weight: normal;
-    line-height: 1.2;
-    text-align: left;
-    width: 100%;
-}
-
-.info p {
+    font-size: 1.3rem;
+    color: #b8b8b8;
     margin-bottom: 0.5rem;
-}
-
-.right-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
-    margin-right: 1rem;
-    margin-left: 0.5rem;
-    padding: 0;
-    position: relative;
-    height: auto;
-}
-
-.projects-title, .skills-title {
-    font-family: 'Monument Extended Regular', sans-serif;
-    font-size: 3.4rem;
-    margin-top: 1.2rem;
-    margin-bottom: 0.3rem;
-    color: #222;
-    text-align: left;
     font-weight: normal;
+}
+
+.bio-text {
+    font-family: 'Neue Haas XThin', sans-serif;
+    font-size: 1.1rem;
+    color: #e8e8e8;
+    line-height: 1.6;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.skills-section {
+    margin-top: 3.5rem;
+}
+
+.skills-title {
+    font-family: 'Monument Extended Regular', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
     text-transform: uppercase;
-    line-height: 0.9;
 }
 
-.projects-list, .skills-list {
-    width: 100%;
-    margin: 0;
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
 }
 
-.project {
-    background-color: #ffffff;
-    border-radius: 0;
-    padding: 0.5rem;
-    margin-bottom: 0.6rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    border: 1px solid #222;
+.skill-pill {
+    font-family: 'Neue Haas XThin', sans-serif;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 18px;
+    font-size: 0.9rem;
+    font-weight: normal;
+    transition: background 0.2s ease;
+}
+
+.skill-pill:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* Right Column */
+.right-column {
+    background-color: #f8f8f8;
+    padding: 3rem;
+    overflow-y: auto;
+}
+
+.projects-title {
+    font-family: 'Monument Extended Regular', sans-serif;
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
 }
 
 .project-title {
     font-family: 'Neue Haas Medium', sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 0.3rem;
-    color: #222;
-    text-transform: uppercase;
-    line-height: 1;
+    font-size: 1.3rem;
     font-weight: normal;
+    color: #333;
+    text-transform: uppercase;
 }
 
-.project-icon {
-    transition: filter 0.2s;
+.project-links {
+    display: flex;
+    gap: 0.8rem;
 }
 
 .project-link {
     font-family: 'Neue Haas XThin', sans-serif;
-    color: #444;
+    color: #666;
     text-decoration: none;
+    font-size: 0.85rem;
     font-weight: normal;
-    display: inline-flex;
-    align-items: center;
-    transition: all 0.2s;
+    transition: color 0.3s ease;
     border-bottom: 1px solid transparent;
 }
 
@@ -255,123 +187,74 @@ body::after {
     border-bottom: 1px solid #222;
 }
 
-.project-link:hover .project-icon {
-    filter: invert(20%);
-}
-
 .project-description {
     font-family: 'Neue Haas XThin', sans-serif;
-    color: #444;
-    line-height: 1.4;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
     font-size: 1rem;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.6rem;
-    width: 100%;
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-.skill-item {
+.tag {
     font-family: 'Neue Haas XThin', sans-serif;
-    background-color: #ffffff;
-    padding: 0.5rem;
-    font-size: 1rem;
+    background: #f0f4f8;
+    color: #374151;
+    padding: 0.3rem 0.8rem;
+    border-radius: 14px;
+    font-size: 0.8rem;
     font-weight: normal;
-    text-align: center;
-    color: #333;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    border: 1px solid #222;
 }
 
-@media screen and (min-width: 1600px) {
-    .page-container {
-        display: flex;
-        justify-content: center;
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
     }
-    
-    .page-inner-container {
-        width: 1600px;
-        margin: 0 auto;
+
+    body {
+        overflow-y: auto;
+    }
+
+    .left-column {
+        padding: 2rem;
+        height: auto;
+    }
+
+    .profile-section {
+        justify-content: flex-start;
+    }
+
+    .name-title {
+        font-size: 2.5rem;
+    }
+
+    .right-column {
+        padding: 2rem;
+        overflow-y: visible;
+    }
+
+    .projects-title {
+        font-size: 2rem;
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .main-content {
-        flex-direction: column;
-    }
-
-    .left-section, .right-section {
-        width: 100%;
-        margin: 0;
-    }
-
-    .name-first {
-        font-size: 6rem;
-    }
-
-    .name-last {
-        font-size: 8rem;
-    }
-
-    .info {
+@media (max-width: 480px) {
+    .name-title {
         font-size: 2rem;
     }
 
-    .skills-list {
-        padding-bottom: 1rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .name-first {
-        font-size: 4rem;
-    }
-
-    .name-last {
-        font-size: 5.5rem;
-    }
-
-    .info {
+    .projects-title {
         font-size: 1.5rem;
     }
 
-    .skills-list {
-        padding-bottom: 1rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .name-first {
-        font-size: 3rem;
-    }
-
-    .name-last {
-        font-size: 4rem;
-    }
-
-    .info {
-        font-size: 1.2rem;
-    }
-
-    .projects-title, .skills-title {
-        font-size: 2.4rem;
-    }
-
-    .skills-list {
-        padding-bottom: 1rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
+    .left-column,
+    .right-column {
+        padding: 1.5rem;
     }
 }

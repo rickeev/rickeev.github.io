@@ -3,71 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rickee Vang - Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Rickee Vang - Software Engineering Student & GIS Student | Portfolio Website</title>
+    <meta name="description" content="Rickee Vang is a software engineering student based in Sacramento, CA specializing in React, JavaScript, Python, and data visualization. View my portfolio of web applications, data dashboards, and mapping projects.">
+    <meta name="keywords" content="Rickee Vang, Kee Vang, Vang, dev, software engineer, full-stack developer, React developer, GIS technician, GIS analyst, JavaScript, Python, web development, Sacramento developer, data visualization, portfolio">
+    <meta name="author" content="Rickee Vang">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="en-US">
+    
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rickee Vang - Software Engineering Student & Developer Portfolio">
+    <meta property="og:description" content="Explore the portfolio of Rickee Vang, a software engineering student from Sacramento specializing in React, JavaScript, Python, and data visualization projects.">
+    <meta property="og:url" content="https://rickeev.github.io">
+    <meta property="og:site_name" content="Rickee Vang Portfolio">
+    <meta property="og:locale" content="en_US">
+    <!-- <meta property="og:image" content="https://rickeev.github.io/images/portfolio-preview.jpg"> -->
+    <!-- <meta property="og:image:alt" content="Rickee Vang Portfolio Preview"> -->
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rickee Vang - Software Engineering Student & Developer Portfolio">
+    <meta name="twitter:description" content="Explore the portfolio of Rickee Vang, a software engineering student from Sacramento specializing in React, JavaScript, Python, and data visualization projects.">
+    <!-- <meta name="twitter:image" content="https://rickeev.github.io/images/portfolio-preview.jpg"> -->
+    <!-- <meta name="twitter:creator" content="@your_twitter_handle"> -->
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rickeev.github.io">
+    
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Favicon (add when you have one) -->
+    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rickee Vang",
+        "jobTitle": "Software Engineering Student",
+        "description": "Software engineering student specializing in React, JavaScript, Python, and data visualization",
+        "url": "https://rickeev.github.io",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Sacramento",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+        },
+        "knowsAbout": [
+            "JavaScript",
+            "React",
+            "Python",
+            "HTML",
+            "CSS",
+            "Node.js",
+            "Express",
+            "Git",
+            "Data Visualization",
+            "Web Development",
+            "Web Mapping"
+        ],
+        "memberOf": "Software Engineering Program"
+    }
+    </script>
+
+    <title>Rickee Vang - Portfolio Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="page-container">
-        <div class="page-inner-container">
-            <nav class="navbar">
-                <div class="navbar-container">
-                    <ul>
-                        <li>
-                            <a href="RickeeVangResume.pdf" target="_blank" rel="noopener noreferrer" class="resume-link">
-                                RESUME
-                                <img src="arrow-top-right-svgrepo-com.svg" class="nav-icon" alt="External link icon" width="35" height="35" style="margin-bottom: 3px">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <div class="profile-section">
+                <h1 class="name-title">RICKEE VANG</h1>
+                <p class="subtitle">SOFTWARE ENGINEERING & GIS STUDENT</p>
+                <p class="subtitle">BASED IN SACRAMENTO, CA</p>
+                
+                <p class="bio-text">
+                    Software engineering student with experience in web development through building personal projects.
+                    Will be enrolled in a GIS certificate program starting Fall 2025 while studying.
+                    Currently involved with OpenStreetMap as a volunteer and have been consistently digitizing features in the North Sacramento area.
+                    Open to work or internship opportunities.
+                </p>
 
-            <div class="main-content">
-                <div class="left-section" id="home">
-                    <div class="name-wrapper">
-                        <div class="name-first">RICKEE</div>
-                        <div class="name-last">VANG</div>
+                <div class="skills-section">
+                    <h2 class="skills-title">Skills</h2>
+                    <div class="skills-container">
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">React</span>
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">HTML</span>
+                        <span class="skill-pill">CSS</span>
+                        <span class="skill-pill">Tailwind CSS</span>
+                        <span class="skill-pill">Node.js</span>
+                        <span class="skill-pill">Express</span>
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">Google Maps Platform</span>
+                        <span class="skill-pill">Leaflet.js</span>
+                        <span class="skill-pill">Recharts</span>
                     </div>
-                    <div class="info-container">
-                        <div class="info">
-                            <p>SOFTWARE ENGINEERING STUDENT</p>
-                            <p>BASED IN SACRAMENTO, CA</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <h2 class="projects-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Rendezvous</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/rickeev/rendezvous-map" class="project-link" target="_blank">GitHub</a>
+                            <a href="https://rickeev.github.io/rendezvous-demo" class="project-link" target="_blank">Demo</a>
                         </div>
+                    </div>
+                    <p class="project-description">A full-stack map-based web app that finds the midpoint between two locations and recommends restaurants within a 1-mile radius.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">Google Maps Platform</span>
+                        <span class="tag">API Implementation</span>
                     </div>
                 </div>
 
-                <div class="right-section">
-                    <div id="projects" class="projects-list">
-                        <h2 class="projects-title">Projects</h2>
-                        <div class="project">
-                            <h3 class="project-title">Rendezvous</h3>
-                            <a href="https://github.com/rickeev/rendezvous-map" class="project-link" target="_blank" rel="noopener noreferrer">REPO </a>
-                            <span>|</span>
-                            <a href="https://rickeev.github.io/rendezvous-demo" class="project-link" target="_blank" rel="noopener noreferrer">VIEW DEMO </a>
-                            <p class="project-description">A map-based web app that finds the midpoint between two locations and recommends restaurants within a 1-mile radius.</p>
-                        </div>
-                        <div class="project">
-                            <h3 class="project-title">Sports Mascot Database</h3>
-                            <a href="https://github.com/rickeev/mascot-search" class="project-link" target="_blank" rel="noopener noreferrer">REPO </a>
-                            <span>|</span>
-                            <a href="https://rickeev.github.io/mascot-search" class="project-link" target="_blank" rel="noopener noreferrer">VIEW SITE </a>
-                            <p class="project-description">A database web app with search functionalities.</p>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Sacramento Public Health Data Dashboard</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">GitHub</a>
                         </div>
                     </div>
-                    
-                    <div id="skills" class="skills-list">
-                        <h2 class="skills-title">Skills</h2>
-                        <div class="skills-grid">
-                            <div class="skill-item">JavaScript</div>
-                            <div class="skill-item">HTML</div>
-                            <div class="skill-item">CSS</div>
-                            <div class="skill-item">React</div>
-                            <div class="skill-item">Node.js</div>
-                            <div class="skill-item">Express</div>
-                            <div class="skill-item">Git</div>
+                    <p class="project-description">An interactive analytics dashboard processing 5,000+ drug death records from Sacramento County's public datasets.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">Recharts</span>
+                        <span class="tag">Data Visualization</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Northern Virginia Data Center Map</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/rickeev/nova-data-center-map" class="project-link" target="_blank">GitHub</a>
+                            <a href="https://vang.dev/nova-data-center-map" class="project-link" target="_blank">Live</a>
                         </div>
+                    </div>
+                    <p class="project-description">A Leaflet map of data centers located in Loudoun County of Northern Virgia.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Leaflet.js</span>
+                        <span class="tag">GeoJSON</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Sports Mascot Database</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/rickeev/mascot-search" class="project-link" target="_blank">GitHub</a>
+                            <a href="https://rickeev.github.io/mascot-search" class="project-link" target="_blank">Live</a>
+                        </div>
+                    </div>
+                    <p class="project-description">A database web app with search functionalities for looking up major league sports mascots.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
                     </div>
                 </div>
             </div>
