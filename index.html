@@ -335,6 +335,15 @@
         const navLinks = document.querySelectorAll('a[data-page]');
 
         function getPageFromPath() {
+            // Check for query parameter first (from redirects)
+            const urlParams = new URLSearchParams(window.location.search);
+            const pageParam = urlParams.get('page');
+            if (pageParam) {
+                // Clean up URL by removing query param
+                window.history.replaceState({}, '', '/' + pageParam);
+                return pageParam;
+            }
+
             const path = window.location.pathname;
             const page = path.split('/').pop() || 'home';
             return page === '' || page === 'index.html' ? 'home' : page;
