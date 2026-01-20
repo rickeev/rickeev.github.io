@@ -20,14 +20,14 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Page load overlay -->
     <div class="page-loader">
-        <div class="loader-content">RV</div>
+        <div class="loader-content"></div>
     </div>
 
     <!-- Back to top button -->
@@ -37,101 +37,96 @@
         </svg>
     </button>
 
-    <nav class="navbar">
-        <a href="#" class="nav-logo">Rickee Vang</a>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
         <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" data-page="home" class="active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                <span>Home</span>
+            </a>
+            <a href="#experience" data-page="experience">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+                <span>Experience</span>
+            </a>
+            <a href="#projects" data-page="projects">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                </svg>
+                <span>Projects</span>
+            </a>
+            <a href="#contact" data-page="contact">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <span>Contact</span>
+            </a>
         </div>
+        <div class="sidebar-footer">
+            <div class="coordinates">38.5816° N<br>121.4944° W</div>
+        </div>
+    </nav>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <span class="mobile-title">Rickee Vang</span>
         <button class="hamburger" aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
-    </nav>
+    </header>
 
     <!-- Mobile menu -->
     <div class="mobile-menu">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" data-page="home">Home</a>
+        <a href="#experience" data-page="experience">Experience</a>
+        <a href="#projects" data-page="projects">Projects</a>
+        <a href="#contact" data-page="contact">Contact</a>
     </div>
 
-    <!-- Subtle coordinate decoration -->
-    <div class="coordinates">38.5816° N, 121.4944° W</div>
-
-    <main>
-        <section class="hero">
-            <p class="hero-intro">Software Engineering & GIS Student</p>
-            <h1 class="hero-title">
-                <span class="typed-text"></span><span class="cursor">_</span>
-            </h1>
-            <p class="hero-description">
-                Building at the intersection of web development and cartography.
-                I make maps that tell stories and tools that help people understand
-                the world around them.
-            </p>
-            <div class="hero-links">
-                <a href="https://github.com/rickeev" class="hero-link" target="_blank">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
-                    GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/rickeevang/" class="hero-link" target="_blank">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    LinkedIn
-                </a>
-                <a href="RickeeVangResume.pdf" class="hero-link" target="_blank">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                    Resume
-                </a>
-            </div>
-        </section>
-
-        <section id="about" class="section about">
-            <p class="section-label">About</p>
-            <h2 class="section-title">A bit about me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I got into programming because I wanted to build things, not just study theory.
-                        Maps became my focus after realizing how much untapped potential exists in
-                        geographic data, with most of it sitting unused in databases or scattered across government websites.
-                    </p>
-                    <p>
-                        My approach is practical: find interesting spatial data, clean it up, and
-                        build something people can actually use. Whether that's mapping every fire
-                        infrastructure data in Sacramento County or visualizing the data center density in Northern Virginia, I like projects where you can point at a map and say
-                        <strong>"I built that."</strong>
-                    </p>
-                    <p>
-                        Currently finishing my software engineering degree at WGU while working as
-                        an intern at ShareVita. Also pursuing a GIS certificate because I believe
-                        the best geospatial developers understand both the code and the cartography.
-                    </p>
+    <main class="main-content">
+        <!-- Home Page -->
+        <div class="page active" data-page="home">
+            <section class="hero">
+                <p class="hero-intro">Software Engineering & GIS Student</p>
+                <h1 class="hero-title">I turn geographic data into interactive experiences</h1>
+                <p class="hero-description">
+                    Building at the intersection of web development and cartography.
+                    I make maps that tell stories and tools that help people understand
+                    the world around them.
+                </p>
+                <div class="hero-links">
+                    <a href="https://github.com/rickeev" class="hero-link" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/rickeevang/" class="hero-link" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="RickeeVangResume.pdf" class="hero-link" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        Resume
+                    </a>
                 </div>
-                <div class="skills-list">
-                    <div class="skill-group">
-                        <h3>Languages</h3>
-                        <p>Python, TypeScript, JavaScript, HTML, CSS</p>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Frameworks & Tools</h3>
-                        <p>React, Node.js, Supabase, Jest, Git</p>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Geospatial</h3>
-                        <p>Leaflet, ArcGIS Pro, Google Maps API, GDAL, GeoJSON</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+            <footer class="footer">
+                <p>Rickee Vang &copy; <span class="year"></span></p>
+                <p>Sacramento, CA</p>
+            </footer>
+        </div>
 
-        <section id="experience" class="section experience">
-            <p class="section-label">Experience</p>
-            <h2 class="section-title">Where I've worked</h2>
+        <!-- Experience Page -->
+        <div class="page" data-page="experience">
+            <section class="section experience">
+            <h2 class="section-title">Experience</h2>
             <div class="experience-list">
                 <div class="experience-item">
                     <div class="experience-meta">
@@ -141,9 +136,9 @@
                     <div class="experience-content">
                         <h3>Software Development Engineer Intern</h3>
                         <p>
-                            ShareVita is a nonprofit building community platforms, with projects like carpooling to Tahoe and connecting dog owners with dog sitters.
+                            ShareVita is a nonprofit that's building community platforms, like carpooling to Tahoe and connecting dog owners with dog sitters.
                             I've been writing tests, fixing bugs, and shipping features. Most recently worked
-                            on recurring ride management, which meant dealing with real production-level code for the first time in my life.
+                            on a recurring ride management feature.
                         </p>
                         <div class="experience-tags">
                             <span>React</span>
@@ -161,28 +156,33 @@
                     <div class="experience-content">
                         <h3>Volunteer Contributor</h3>
                         <p>
-                            Contributed 56,000+ edits to the world's largest open geographic database.
-                            Focused on digitizing buildings, roads, and points of interest in areas
+                            Contributed 56,000+ edits to the world's largest open-source geographic database.
+                            Focused on digitizing buildings, parks, and points of interest in areas
                             with sparse coverage. It's tedious work, but there's something satisfying
                             about knowing your edits show up on maps used by millions of people.
                         </p>
                         <div class="experience-tags">
-                            <span>JOSM</span>
                             <span>iD Editor</span>
-                            <span>Cartography</span>
+                            <span>Digitization</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            </section>
+            <footer class="footer">
+                <p>Rickee Vang &copy; <span class="year"></span></p>
+                <p>Sacramento, CA</p>
+            </footer>
+        </div>
 
-        <section id="projects" class="section projects">
-            <p class="section-label">Projects</p>
-            <h2 class="section-title">Things I've built</h2>
+        <!-- Projects Page -->
+        <div class="page" data-page="projects">
+            <section class="section projects">
+            <h2 class="section-title">Projects</h2>
             <div class="projects-list">
                 <article class="project-item featured">
                     <div class="project-header">
-                        <h3 class="project-title">Sacramento Fire Hydrant Map</h3>
+                        <h3 class="project-title">Sacramento Fire Infrastructure Map</h3>
                         <div class="project-links">
                             <a href="https://github.com/rickeev/fire-infrastructure-coverage" target="_blank" aria-label="View source">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
@@ -191,9 +191,9 @@
                     </div>
                     <p class="project-description">
                         I wanted to know where all the fire hydrants in Sacramento were. Turns out,
-                        that data doesn't really exist in one place. So I wrote a Python script to
+                        that data doesn't exist at all in my county's GIS open data website. So I wrote a Python script to
                         query Mapillary's street-level imagery API, which uses computer vision to
-                        detect objects in photos. Pulled 35,000+ hydrant locations, then built an
+                        detect objects in street view photos. Pulled 35,000+ hydrant locations, then built an
                         interactive map with marker clustering so your browser doesn't crash trying
                         to render them all.
                     </p>
@@ -221,7 +221,7 @@
                         Built for the classic "where should we meet?" problem. Enter two addresses,
                         and it calculates the geographic midpoint, then finds restaurants nearby.
                         The backend handles caching and rate limiting so I don't burn through Google
-                        Maps API credits. Nothing revolutionary, but it's a full-stack app I use myself.
+                        Maps API credits.
                     </p>
                     <div class="project-tech">
                         <span>React</span>
@@ -233,7 +233,7 @@
 
                 <article class="project-item">
                     <div class="project-header">
-                        <h3 class="project-title">NoVA Data Center Map</h3>
+                        <h3 class="project-title">Northern Virginia Data Center Map</h3>
                         <div class="project-links">
                             <a href="https://github.com/rickeev/nova-data-center-map" target="_blank" aria-label="View source">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
@@ -245,7 +245,7 @@
                     </div>
                     <p class="project-description">
                         Northern Virginia hosts one of the largest concentrations of data centers
-                        in the world. I collected addresses from various sources, geocoded them with
+                        in the world. I collected addresses from DataCenterMap.com, geocoded them with
                         Python, and mapped 230+ facilities. It's a simple visualization, but it makes
                         the scale of cloud infrastructure in one county surprisingly tangible.
                     </p>
@@ -268,22 +268,24 @@
                     </div>
                     <p class="project-description">
                         A CLI tool for archiving Discord conversations. Parses the HTML exports
-                        Discord provides, reconstructs threads, and outputs clean formats. Built
-                        it because I wanted to preserve some community discussions before they
-                        disappeared. Handles date filtering and multiple export formats.
+                        Discord provides, reconstructs threads, and outputs clean formats. Handles date filtering and multiple export formats.
                     </p>
                     <div class="project-tech">
                         <span>Python</span>
-                        <span>HTML Parsing</span>
-                        <span>CLI</span>
                     </div>
                 </article>
             </div>
-        </section>
+            </section>
+            <footer class="footer">
+                <p>Rickee Vang &copy; <span class="year"></span></p>
+                <p>Sacramento, CA</p>
+            </footer>
+        </div>
 
-        <section id="contact" class="section contact">
-            <p class="section-label">Contact</p>
-            <h2 class="section-title">Get in touch</h2>
+        <!-- Contact Page -->
+        <div class="page" data-page="contact">
+            <section class="section contact">
+            <h2 class="section-title">Contact</h2>
             <div class="contact-content">
                 <p class="contact-text">
                     I'm looking for full-time opportunities and interesting projects.
@@ -306,95 +308,96 @@
                     </a>
                 </div>
             </div>
-        </section>
+            </section>
+            <footer class="footer">
+                <p>Rickee Vang &copy; <span class="year"></span></p>
+                <p>Sacramento, CA</p>
+            </footer>
+        </div>
     </main>
-
-    <footer class="footer">
-        <p>Built by Rickee Vang &copy; <span id="year"></span></p>
-        <p>Sacramento, CA</p>
-    </footer>
 
     <script>
         // Page loader
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.querySelector('.page-loader').classList.add('hidden');
-                document.body.classList.add('loaded');
             }, 300);
         });
 
-        // Dynamic year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Typing effect
-        const typedText = document.querySelector('.typed-text');
-        const cursor = document.querySelector('.cursor');
-        const textToType = 'I turn geographic data into interactive experiences';
-        const highlightStart = textToType.indexOf('interactive');
-        const highlightEnd = textToType.length;
-        let charIndex = 0;
-
-        function type() {
-            if (charIndex < textToType.length) {
-                const char = textToType.charAt(charIndex);
-
-                if (charIndex >= highlightStart) {
-                    if (charIndex === highlightStart) {
-                        typedText.innerHTML += '<span class="highlight">';
-                    }
-                    typedText.querySelector('.highlight').textContent += char;
-                } else {
-                    typedText.innerHTML = textToType.substring(0, charIndex + 1);
-                }
-
-                charIndex++;
-                setTimeout(type, 30);
-            } else {
-                cursor.style.animation = 'blink 1s step-end infinite';
-            }
-        }
-
-        // Start typing after loader finishes
-        setTimeout(type, 600);
-
-        // Navbar scroll effect
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+        // Dynamic year (update all year elements)
+        document.querySelectorAll('.year').forEach(el => {
+            el.textContent = new Date().getFullYear();
         });
 
-        // Hamburger menu
+        // Hamburger menu elements (declare early for use in navigateToPage)
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
 
+        // SPA Page Routing
+        const pages = document.querySelectorAll('.page');
+        const navLinks = document.querySelectorAll('a[data-page]');
+
+        function navigateToPage(pageName) {
+            // Hide all pages
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Show target page
+            const targetPage = document.querySelector(`.page[data-page="${pageName}"]`);
+            if (targetPage) {
+                targetPage.classList.add('active');
+
+                // Make sections visible on the active page
+                targetPage.querySelectorAll('.section').forEach(section => {
+                    section.classList.add('visible');
+                });
+            }
+
+            // Update nav link active states
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === pageName) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'instant' });
+
+            // Update URL hash
+            history.pushState(null, '', `#${pageName}`);
+
+            // Close mobile menu if open
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+
+        // Handle navigation clicks
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageName = link.getAttribute('data-page');
+                navigateToPage(pageName);
+            });
+        });
+
+        // Handle browser back/forward
+        window.addEventListener('popstate', () => {
+            const hash = window.location.hash.slice(1) || 'home';
+            navigateToPage(hash);
+        });
+
+        // Initial page load based on hash
+        const initialHash = window.location.hash.slice(1) || 'home';
+        navigateToPage(initialHash);
+
+        // Hamburger menu click handler
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             document.body.classList.toggle('menu-open');
-        });
-
-        // Close mobile menu on link click
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.classList.remove('menu-open');
-            });
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
         });
 
         // Back to top button
@@ -409,19 +412,6 @@
 
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Intersection Observer for fade-in
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
         });
     </script>
 </body>
